@@ -7,10 +7,10 @@ var fs = require('fs');
 app.get('/', function(request, response) {
 
 var bufferIn = fs.readFileSync('index.html');
+var bufferToString = bufferIn.toStrin);
 
 
-
-  response.send('Hello World!');
+  response.send(bufferToString);
 });
 
 var port = process.env.PORT || 5000;
