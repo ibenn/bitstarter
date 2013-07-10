@@ -6,7 +6,7 @@ var fs = require('fs');
 
 app.get('/', function(request, response) {
 
-fs.readFile('/etc/passwd', function(err,data){
+fs.readFileSync('/etc/passwd', function(err,data){
 	if (err) throw err;
 	response.send('Buffer ok');
 });
