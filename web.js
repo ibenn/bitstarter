@@ -6,10 +6,7 @@ var fs = require('fs');
 
 app.get('/', function(request, response) {
 
-fs.readFileSync('/etc/passwd', function(err,data){
-	if (err) throw err;
-	response.send('Buffer ok');
-});
+var bufferIn = fs.readFileSync('/home/ubuntu/bitstarter/index.html');
 
 
 
