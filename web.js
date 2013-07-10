@@ -6,7 +6,7 @@ var fs = require('fs');
 
 app.get('/', function(request, response) {
 
-var bufferIn = fs.readFileSync('/home/ubuntu/bitstarter/index.html');
+var bufferIn = fs.readFileSync('index.html');
 
 
 
