@@ -20,7 +20,7 @@ References:
    - https://developer.mozilla.org/en-US/docs/JSON
    - https://developer.mozilla.org/en-US/docs/JSON#JSON_in_Firefox_2
 */
-
+[B
 var fs = require('fs');
 var rest = require('restler');
 var program = require('commander');
@@ -49,7 +49,7 @@ var checkHtmlFile = function(htmlfile, checksfile) {
     $ = cheerioHtmlFile(htmlfile);
     var checks = loadChecks(checksfile).sort();
     var out = {};
-    for(var ii in checks) {
+  [B  for(var ii in checks) {
         var present = $(checks[ii]).length > 0;
         out[checks[ii]] = present;
     }
@@ -69,7 +69,8 @@ if(require.main == module) {
         .parse(process.argv);
     var checkJson = checkHtmlFile(program.file, program.checks);
     var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
+    console.log(routJson);
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
+[B
