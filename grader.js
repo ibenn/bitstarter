@@ -67,7 +67,7 @@ var loadChecks = function(checksfile) {
 var checkHtmlFile = function(htmlfile, checksfile, urlfile) {
 	if(urlfile){
 		$ = cheerioHtmlFile(urlfile);
-		fs.unlink(urlfile);
+		//fs.unlink(urlfile);
 	}else{    
 
 		$ = cheerioHtmlFile(htmlfile);
